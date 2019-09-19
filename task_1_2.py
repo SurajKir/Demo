@@ -1,3 +1,4 @@
+"""Changes made locally"""
 class inst():
     __count = 0
     @staticmethod
