@@ -3,10 +3,9 @@ class inst():
     @staticmethod
     def getInstance():
         if(inst.__count<10):
-            inst()
+            return inst()
         else:
             raise Exception('Object limit exceeded') 
-        return inst.__count
         
     def __init__(self):
         if(inst.__count<10):
@@ -17,6 +16,6 @@ class inst():
             
 
 
-for i in range(0,100):
+for i in range(0,10):
     ins = inst.getInstance()
     
