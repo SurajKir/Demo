@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Spyder Editor
-
+//Changes done on remote server.//
 This is a temporary script file.
 """
 def multiply(x,y):
