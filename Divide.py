@@ -5,8 +5,10 @@ Spyder Editor
 This is a temporary script file.
 """
 def multiply(x,y):
-    if(y<0 or x<0):
-        return -multiply(x,y)
+    if(y<0 and x<0):
+        return multiply(abs(x),abs(y))
+    elif(y<0 or x<0):
+        return -multiply(abs(x),abs(y))
     elif(y==0 or x==0):
         return 0
     elif(x==1):
@@ -22,6 +24,11 @@ def divide(x,y):
         raise Exception('Divide by Zero')
     elif(x==0):
         return 0
+    
+    if(y<0 and x<0):
+        return divide(abs(x),abs(y))
+    elif(y<0 or x<0):
+        return -divide(abs(x),abs(y))
     
     curr_quo = 0
     inc = y
@@ -40,4 +47,4 @@ def divide(x,y):
     return curr_quo
 
 
-print(divide(10.2, 5))
+print(divide(5,2))
