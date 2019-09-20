@@ -15,11 +15,13 @@ for i in string:
     elif(i==')'):
         if(len(stack)==0):
             flag = 0
+            print('The first offender is at [{}] index.'.format(string.index(i)))
             break
         else:
             stack.pop()
     else:
         flag = 0
+        print('The first offender is at [{}] index.'.format(string.index(i)))
         break
         
 if(len(stack)==0 and flag!=0):
