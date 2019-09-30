@@ -1,2 +1,4 @@
 
 \.DS_Store
+\.jason
+node_modules/
