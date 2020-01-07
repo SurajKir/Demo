@@ -65,8 +65,22 @@ def DivisibleBy7(string):
     else:
         LastDigit = string[-1]
         RemainingString = string[0:(len(string)-1)]
-        Result = int(RemainingString) - int(LastDigit)
+        Result = int(RemainingString) - (2 * int(LastDigit))
         return DivisibleBy7(str(Result))
+    return False
+
+
+def ChikaTestDivisibleBy7(string):
+    if(len(string)<=2):
+        if(StringIsInt(str(divide(int(string),7)))):
+            return True
+        else:
+            return False
+    else:
+        LastDigit = string[-1]
+        RemainingString = string[0:(len(string)-1)]
+        Result = int(RemainingString) + (5 * int(LastDigit))
+        return ChikaTestDivisibleBy7(str(Result))
     return False
 
 
@@ -88,7 +102,7 @@ def DivisibleBy9(string):
 number = input('Enter the no. :')
 print('The no. is divisible by the following numbers:')
 DivisibleBy = [DivisibleBy2(number), DivisibleBy3(number), DivisibleBy4(number), DivisibleBy5(number),
-                DivisibleBy6(number), DivisibleBy7(number), DivisibleBy8(number), DivisibleBy9(number)]
+                DivisibleBy6(number), ChikaTestDivisibleBy7(number), DivisibleBy8(number), DivisibleBy9(number)]
 
 for i in range(0,8):
     if(DivisibleBy[i] == True):
